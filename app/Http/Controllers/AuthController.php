@@ -9,7 +9,16 @@ class AuthController extends Controller
     public function register(){
     	return view('from');
     }
-    public function welcome_post(){
-    	return view('selamat');
+    public function welcome_post(Request $request){
+    	$firstname =$request->input ('firstname');
+    	$lastname  =$request->input ('lastname');
+
+    	$data =[
+    		'first'=> $firstname,
+    		'last' => $lastname,
+    		
+    	];
+    	return view('selamat',$data);
     }
+
 }

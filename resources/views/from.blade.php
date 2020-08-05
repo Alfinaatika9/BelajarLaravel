@@ -11,10 +11,11 @@
 	<div>
 		<form action="/welcome" method="POST">
 			@csrf
+		
 			<label for="firstname">First Name : </label><br><br>
-				<input type="text" placeholder ="User Name" id="firstname" name="firstname"><br><br>
+				<input type="text" placeholder ="User Name" id="firstname" name="firstname" value="{{old('first')}}"><br><br>
 			<label for="lastname">Last Name : </label><br><br>
-				<input type="text" placeholder ="User Name" id="lastname" name="lastname"><br><br>
+				<input type="text" placeholder ="User Name" id="lastname" name="lastname" value="{{old('last')}}"><br><br>
 			<label> Gender : </label><br><br>
 				<input type="radio"  name="gender"   value="0"> Male   <br>
 				<input type="radio"  name="gender"   value="1"> Female <br>
