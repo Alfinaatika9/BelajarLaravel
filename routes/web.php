@@ -14,6 +14,16 @@
 Route::get('/lala', function () {
    //return view('welcome');
 }); 
-Route::get('/','HomeController@index');
+Route::get('/baru','HomeController@index');
 Route::get('/register','AuthController@register');
 Route::post('/welcome','AuthController@welcome_post');
+
+Route::get('/master',function() {
+	return view('adminlte.master');
+});
+Route::get('/',function() {
+	return view('items.index1');
+});
+Route::get('/data-tables',function() {
+	return view('items.index2');
+});
